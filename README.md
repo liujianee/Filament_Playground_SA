@@ -97,7 +97,7 @@ add_executable(helloquad src/helloquad.cpp src/NativeWindowHelperCocoa.mm)
 target_link_libraries(helloquad ${SDL2_LIBRARIES} ${FILAMENT_LIBS})
 ~~~
 
-### Build and Run
+## Build and Run
 1. Following below for the building:
 ~~~
 mkdir build
