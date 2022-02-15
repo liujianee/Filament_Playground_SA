@@ -14,9 +14,9 @@ Before looking into the codes and building samples in this repo, I strongly sugg
 ## Notes for CMakeLists:
 
 ### SDL2
-SDL2 is used to create native windows and listen to some events in the Filament samples. In the official Filament repo, a SDL2 skeleton was implemented in FilamentAPP, which might look a bit complicated for new learners. So in this repo, I re-organized the SDL2 calls in each sample, making the samples "standalone" for easier understanding. 
+SDL2 is used to create native windows and listen to some events in the Filament samples. In the official Filament repo, a SDL2 skeleton was implemented in FilamentAPP, which might look a bit complicated for new learners. So in this repo, I reorganized the SDL2 calls in each sample, making the samples "standalone" for easier understanding. 
 
-My way of organization may not be optimal, it's just my attempts in disentangling the whole process. Suggestions for improvement are alway welcome.
+My way of organization may not be optimal, it's just my attempts in disentangling the whole process. Suggestions for improvement are always welcome.
 
 1. Copy all the SDL2 header files into local dir for convenience. These header files can be found in [here](https://github.com/google/filament/tree/main/third_party/libsdl2/include). (Or from a saperate SDL2 installtion I believe.). In CMakeLists.txt, these lines are added:
 ~~~
