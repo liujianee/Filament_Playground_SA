@@ -109,3 +109,8 @@ make
 ~~~
 
 2. Try the executable as you wish.
+
+
+
+## Disclaimer
+The source codes and libraries related to Filament belongs to Google Filament.
