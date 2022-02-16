@@ -3,20 +3,20 @@
 <img src="https://github.com/liujianee/Filament_Playground_SA/blob/main/build/suzanne.gif" width="80%">
 
 ## Intro:  
-This repo is a playground for Google's Filament rendering engine. Filament is lightweighted, fast, and very elegant in my opinion. I'll provide some standalone Filament samples in this repo. The samples rely on the released filament libraries, and I tried to keep the dependencies minimum. I hope in this way the Filament learners will find it easy to get started in their Filament journey.
+This repo is a playground for Google's [Filament](https://github.com/google/filament) rendering engine. Filament is lightweighted, fast, and very elegant in my opinion. I'll provide some standalone Filament samples in this repo. The samples rely on the released filament libraries, and I tried to keep the dependencies minimum. I hope in this way the Filament learners will find it easy to get started in their Filament journey.
 
 
 ## Environment:
 The samples here should be working properly on MacOS. The default backend is Metal, while I've also tried OpenGL and Vulkan, which work fine.  I've also tried some samples inside a Vulkan docker container on a remote headless server (without display), and for this part I'll explain more in the future.
 
 
-Before looking into the codes and building samples in this repo, I strongly suggest readers reading the official Filament repo first, and building the official examples from sources. By doing that readers can get familar with the libraries, dependencies (if any), and necessary assets used in this repo.
+Before looking into the codes and building samples in this repo, I strongly suggest readers reading the official Filament repo first, and building the [official examples](https://github.com/google/filament/tree/main/samples) from sources. By doing that readers can get familar with the libraries, dependencies (if any), and necessary assets used in this repo.
 
 
 ## Notes for CMakeLists:
 
 ### SDL2
-SDL2 is used to create native windows and listen to some events in the Filament samples. In the official Filament repo, a SDL2 skeleton was implemented in FilamentAPP, which might look a bit complicated for new learners. So in this repo, I reorganized the SDL2 calls in each sample, making the samples "standalone" for easier understanding. 
+[SDL2](https://www.libsdl.org/) is used to create native windows and listen to some events in the Filament samples. In the official Filament repo, a SDL2 skeleton was implemented in [FilamentAPP](https://github.com/google/filament/tree/main/libs/filamentapp), which might look a bit complicated for new learners. So in this repo, I reorganized the SDL2 calls in each sample, making the samples "standalone" for easier understanding. 
 
 My way of organization may not be optimal, it's just my attempts in disentangling the whole process. Suggestions for improvement are always welcome.
 
@@ -112,5 +112,5 @@ make
 
 
 
-## Disclaimer
-The source codes and libraries related to Filament belongs to Google Filament.
+## License
+Plese refer to the original Filament [LICENSE](https://github.com/google/filament/blob/main/LICENSE) for the use of codes, libraries, and assets.
