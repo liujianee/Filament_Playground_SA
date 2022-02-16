@@ -7,7 +7,7 @@ This repo is a playground for Google's [Filament](https://github.com/google/fila
 
 
 ## Environment
-The samples here should be working properly on MacOS. The default backend is Metal, while I've also tried OpenGL and Vulkan, which work fine.  I've also tried some samples inside a Vulkan docker container on a remote headless server (without display), and for this part I'll explain more in the future.
+The samples here should be working properly on MacOS. The default backend is Metal, while I've also tried OpenGL and Vulkan, which work fine.  I've also tried some samples inside a [Vulkan docker container](https://hub.docker.com/r/nvidia/vulkan) on a remote headless server (without display), and for this part I'll explain more in the future.
 
 
 Before looking into the codes and building samples in this repo, I strongly suggest readers reading the official Filament repo first, and building the [official examples](https://github.com/google/filament/tree/main/samples) from sources. By doing that readers can get familar with the libraries, dependencies (if any), and necessary assets used in this repo.
@@ -94,7 +94,7 @@ list(APPEND FILAMENT_LIBS "-framework Cocoa -framework QuartzCore -framework Met
 add_executable(helloquad src/helloquad.cpp src/NativeWindowHelperCocoa.mm)
 ~~~
 
-3. link the libraries
+3. Link the libraries
 ~~~
 target_link_libraries(helloquad ${SDL2_LIBRARIES} ${FILAMENT_LIBS})
 ~~~
