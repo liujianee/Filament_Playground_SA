@@ -27,11 +27,11 @@ include_directories(${SDL2_INCLUDE_DIRS})
 ~~~
 
 
-2. Add SDL2 libraries:
+2. Set SDL2 libraries:
 ~~~
 find_package(SDL2 REQUIRED)
 ~~~
-alterantively, we can directly find the SDL2 dynamic lib file and add it; (the dynamic lib file is from the Filament building outputs.)
+alterantively, we can directly find the SDL2 dynamic lib file and set it; (the dynamic lib file is from the Filament building outputs.)
 ~~~
 set(SDL2_LIBRARIES "${FILAMENT_DIR}/filament/out/cmake-release/third_party/libsdl2/tnt/libsdl2.dylib")
 ~~~
