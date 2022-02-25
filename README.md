@@ -20,7 +20,13 @@ Before looking into the codes and building samples in this repo, I strongly sugg
 
 My way of organization may not be optimal, it's just my attempts in disentangling the whole process. Suggestions for improvement are always welcome.
 
-1. Copy all the SDL2 header files into local dir for convenience. These header files can be found in [here](https://github.com/google/filament/tree/main/third_party/libsdl2/include). (Or from a saperate SDL2 installtion I believe.). In CMakeLists.txt, these lines are added:
+1. Try to find SDL2 installed on your system:
+~~~
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS})
+~~~
+
+2. In case it fails in finding SDL2 package, we can do it mannually instread. First, copy all the SDL2 header files into local dir for convenience. These header files can be found in [here](https://github.com/google/filament/tree/main/third_party/libsdl2/include). (Or from a saperate SDL2 installtion.). In CMakeLists.txt, these lines are added:
 ~~~
 set(SDL2_INCLUDE_DIRS "${CMAKE_SOURCE_DIR}/include")
 include_directories(${SDL2_INCLUDE_DIRS})
@@ -28,10 +34,7 @@ include_directories(${SDL2_INCLUDE_DIRS})
 
 
 2. Set SDL2 libraries:
-~~~
-find_package(SDL2 REQUIRED)
-~~~
-alterantively, we can directly find the SDL2 dynamic lib file and set it; (the dynamic lib file is from the Filament building outputs.)
+Again, if the find_package fails for any reason, we can directly specify the SDL2 dynamic lib file and set it; (the dynamic lib file is from the Filament building outputs.)
 ~~~
 set(SDL2_LIBRARIES "${FILAMENT_DIR}/filament/out/cmake-release/third_party/libsdl2/tnt/libsdl2.dylib")
 ~~~
